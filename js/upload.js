@@ -1,15 +1,21 @@
-const uploadFile = document.getElementById("input-img");
+const inputImgFile = document.getElementById("input-img");
+const inputImgBtn = document.getElementById("btn-input-img");
+const inputImgText = document.getElementById("text-input-img");
+
 const uploadBtn = document.getElementById("btn-upload");
-const uploadText = document.getElementById("text-upload");
 
-uploadBtn.addEventListener("click", function() {
-    uploadFile.click();
+inputImgBtn.addEventListener("click", function () {
+  inputImgFile.click();
 });
 
-uploadFile.addEventListener("change", function() {
-    if(uploadFile.value) {
-        uploadText.innerHTML = uploadFile.value;
-    } else {
-        uploadText.innerHTML = "No file chosen yet."
-    }
+inputImgFile.addEventListener("change", function () {
+  if (inputImgFile.value) {
+    inputImgText.innerHTML = inputImgFile.value.match(/[\/\\]([\w\d\s.\-\(\)]+)$/)[1];
+  } else {
+    inputImgText.innerHTML = "No file chosen yet.";
+  }
 });
+
+function showResults() {
+    document.getElementById("container-results").style.display = "block";
+}

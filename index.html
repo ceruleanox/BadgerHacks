@@ -3,41 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BadgerHacks | ImgSong</title>
+        <title>BadgerHacks | Image 2 Audio</title>
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
     <body>
 
-        <!--  SONG SELECTION BOX  -->
-
-        <div class="song-selection-box">
-
             <!--  HEADER  -->
             <header>
                 <div class="header-wrapper">
                     <div class="header-container">
-                    <span id="header-text">Powered By</span><div class="header-logo"></div>
+                    <span id="header-text">Audio2Image - Powered By</span><div class="header-logo"></div>
                 </div>
             </header>
+
+
+        <!--  SONG SELECTION BOX  -->
+
+        <div class="song-selection-box">
 
             <!-- SEARCH CONTAINER -->
             <div class="search-wrapper">
                 <div class="search-container">
                     <input type="search" name="input-search" id="input-search" placeholder="Add keywords">
-                    <button type="button" id="btn-Search">Go!</button>
+                    <button type="button" id="btn-search">Go!</button>
                     Temp, for testing keyword search
                 </div>
-                <div class="upload-container">
+                <div class="choose-file-container">
                     <input type="file" name="input-img" id="input-img" hidden="hidden"/>
-                    <button type="button" name="btn-upload" id="btn-upload"> CHOOSE A FILE</button>
-                    <span id="text-upload">No file chosen yet.</span>
+                    <button type="button" name="btn-input-img" id="btn-input-img">CHOOSE A FILE</button>
+                    <span id="text-input-img">No file chosen yet.</span>
+                </div>
+                <div class="upload-container"> <!-- upload will send image for processing to render playlist/song-->
+                    <input type="file" name="input-img" id="input-img" hidden="hidden"/>
+                    <button type="button" name="btn-upload" id="btn-upload" onclick="showResults()">PLAY MUSIC</button>
                 </div>
             </div>
 
             <!-- RESULTS SEARCH -->
 
-            <div class="container-results" id="container-results"> 
+            <div class="container-results" id="container-results" style="display:none;"> 
                 Magic happens
             </div>
 
@@ -47,8 +52,8 @@
 
     </body>
 
-    <script type='text/javascript' src='config.js'></script>
-    <script type='text/javascript' src='upload.js'></script>
-    <script type='text/javascript' src='script.js'></script>
+    <script type='text/javascript' src='js/config.js'></script>
+    <script type='text/javascript' src='js/upload.js'></script>
+    <script type='text/javascript' src='js/script.js'></script>
 </html>
 
